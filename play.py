@@ -40,10 +40,10 @@ def outlier_finder(str_list: list) -> str:
                 mean += Word.similarity(other_words)
         mean_of_similarities.append((Word.text, mean))
     z_score = zscore([i[1] for i in mean_of_similarities])
-
+    print(z_score)
     copy_mean_of_similarities = mean_of_similarities.copy()
     for i in range(len(mean_of_similarities)):
-        if z_score[i] < -0.2 or z_score[i] > 1.3:
+        if z_score[i] < -0.2 or z_score[i] > 1.5:
             mean_of_similarities.remove(copy_mean_of_similarities[i])
             i -= 1
     return " ".join([i[0] for i in mean_of_similarities])
