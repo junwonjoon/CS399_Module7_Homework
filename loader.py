@@ -21,23 +21,19 @@ def pre_process_data(in_file: str, out_file: str,
     :param lines: number of lines to process 0 for all
     :return: None
     """
-    with open(out_file, 'w') as f:
-        f.write("") #clear out the data within the outfile
+    # with open(out_file, 'w') as f:
+    #     f.write("") #clear out the data within the outfile
     with open(in_file, 'r') as in_file:
         for _ in range(lines):
-            line = in_file.readline() 
-            if not line:  
-                break 
-            listFromLine = line.split(" ")
-            word = Word(listFromLine[0], [float(x) for x in listFromLine[1:]])
-            word.normalize()
-            word.writeToFile(out_file)
-
-    
+            next(in_file)
+        line = in_file.readline() 
+        listFromLine = line.split(" ")
+        word = Word(listFromLine[0], [float(x) for x in listFromLine[1:]])
+        word.normalize()
+        word.writeToFile(out_file)
+        
 
 
 
-
-
-pre_process_data("short_glove.txt", "short_glove_normalized.txt", lines=100000)
+pre_process_data("short_glove.txt", "short_glove_normalized.txt", lines=2)
     
