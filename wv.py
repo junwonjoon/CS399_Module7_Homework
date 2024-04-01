@@ -18,10 +18,6 @@ class Word:
     def __repr__(self) -> str:
         vector_preview = ', '.join(map(str, self.vector[:2]))
         return f"{self.text} [{vector_preview}, ...]"
-    
-    def writeToFile(self, filename) -> None:
-        with open(filename, 'a') as f:
-            f.write(f"{self.text} {" ".join(map(str, self.vector))} \n")
 
     def norm(self) -> float:
         return sqrt(sum([x * x for x in self.vector]))
@@ -54,16 +50,16 @@ class Model(list):
         t0 = process_time()
         with open(inp_file_name, mode="r", encoding="utf8") as inp_file:
             for line in inp_file:
-                sa = line.split()
+                sa = line.split(" ")
                 self.append(Word(sa[0], [float(x) for x in sa[1:]]))
         print(f"Loaded in {process_time() - t0} secs")
-        
-    
-    
+
     def find_word(self, text: str) -> Word | None:
         for w in self:
             if w.text == text:
                 return w
+        else:
+            return None
 
     def find_similar_words(self, word: Word, n: int = 10) -> list[Word]:
         return sorted(self, key=lambda w: w.similarity(word), reverse=True)[:n]
@@ -77,6 +73,6 @@ class Model(list):
     def __contains__(self, text: str) -> bool:
         return self.find_word(text) is not None
 
-
-if __name__ == "__main__":
-    model = Model("models/glove_short.txt")
+#
+# if __name__ == "__main__":
+#     model = Model("models/glove_short.txt")

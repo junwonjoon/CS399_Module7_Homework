@@ -1,16 +1,15 @@
-# This is a sample Python script.
+from play import a_to_b_is_like_c_to, outlier_finder
+import streamlit as st
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+st.set_page_config(
+    page_title="Wonjoon's Outlier Finder",
+    page_icon="🤖"
+)
 
+st.title("Welcome to the outlier finder")
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+st.header("This is outlier finder")
+st.caption("To use outlier finder, enter words in comma seperated list")
+outliers = st.text_input('Outlier Finder', 'apple').replace(" ", "")
+st.write(outlier_finder(outliers.split(',')))
+st.write(a_to_b_is_like_c_to("wine", "France", "pasta"))
