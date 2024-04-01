@@ -5,7 +5,6 @@
 from wv import Model
 from scipy.stats import zscore
 
-model = Model("glove_git.txt")
 
 def a_to_b_is_like_c_to(a: str, b: str, c: str) -> str:
     # let 1 mean Word class

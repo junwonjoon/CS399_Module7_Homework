@@ -1,5 +1,7 @@
 from play import a_to_b_is_like_c_to, outlier_finder
 import streamlit as st
+import wv 
+model = wv.Model("glove_git.txt")
 
 st.set_page_config(
     page_title="Wonjoon's Outlier Finder",
