@@ -1,5 +1,4 @@
 import streamlit as st
-from typing import Self
 from math import sqrt
 from time import process_time
 
@@ -22,16 +21,16 @@ class Word:
         length = self.norm()
         self.vector = [x / length for x in self.vector]
 
-    def similarity(self, w: Self) -> float:
+    def similarity(self, w) -> float:
         return self * w
 
-    def __add__(self, w: Self) -> Self:
+    def __add__(self, w):
         return Word("", [x + y for x, y in zip(self.vector, w.vector)])
 
-    def __sub__(self, w: Self) -> Self:
+    def __sub__(self, w):
         return Word("", [x - y for x, y in zip(self.vector, w.vector)])
 
-    def __mul__(self, w: Self) -> float:
+    def __mul__(self, w) -> float:
         return sum([x * y for x, y in zip(self.vector, w.vector)])
 
 
