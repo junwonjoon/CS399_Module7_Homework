@@ -18,7 +18,7 @@ def a_to_b_is_like_c_to(a: str, b: str, c: str) -> str:
     d.normalize()
     for w in model.find_similar_words(d, 10):
         if w.text not in (a1.text, b1.text, c1.text):
-            return f"{a1.text} to {b1.text} is like {c1.text} to {w.text}"
+            return f"{w.text}"
 
 
 def outlier_finder(str_list: list) -> str:
