@@ -22,8 +22,7 @@ def a_to_b_is_like_c_to(a: str, b: str, c: str) -> str:
 
 
 def outlier_finder(str_list: list) -> str:
-    Word_class_words = []
-    mean_of_similarities = []
+    Word_class_words, mean_of_similarities = [], []
     for words in str_list:
         words1 = model.find_word(words)
         if words1 is None:
@@ -31,21 +30,17 @@ def outlier_finder(str_list: list) -> str:
         words1.normalize()
         Word_class_words.append(words1)
     str_list.clear()
-
-    # comparing similarity to each word:
-    for Word in Word_class_words:
+    for Word in Word_class_words:  # comparing similarity to each word:
         mean = 0
-        for other_words in Word_class_words:
-            if other_words is not Word:
-                mean += Word.similarity(other_words)
+        for other_words in [i for i in Word_class_words if i is not Word]:
+            mean += Word.similarity(other_words)
         mean_of_similarities.append((Word.text, mean))
     z_score = zscore([i[1] for i in mean_of_similarities])
     print(z_score)
     copy_mean_of_similarities = mean_of_similarities.copy()
     for i in range(len(mean_of_similarities)):
-        if z_score[i] < -0.2 or z_score[i] > 1.5:
+        if z_score[i] < -0.10 or z_score[i] > 1.5:
             mean_of_similarities.remove(copy_mean_of_similarities[i])
-            i -= 1
     return " ".join([i[0] for i in mean_of_similarities])
 
 
