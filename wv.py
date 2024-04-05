@@ -4,7 +4,7 @@
     Loading even a model with just 100_000 words takes about 5 seconds.
     Author: Wolf Paulus, https://wolfpaulus.com
 """
-from typing import Self
+from typing_extensions import Self
 from math import sqrt
 from time import process_time
 
