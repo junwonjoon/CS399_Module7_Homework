@@ -1,10 +1,10 @@
 """
-    Remove Outliers from a list of words
+    Remove Outliers from a list of words using streamlit UI.
     Author: Wonjoon Jun
 """
 from wv import Model
 from scipy.stats import zscore
-file_location = "https://git-lfs.github.com/spec/v1 oid sha256:547da2eee78754dc6bac050dd17972f20bdab7db0e106f7daa4d948c7fa3c01e size 259366712"
+# file_location = "https://git-lfs.github.com/spec/v1 oid sha256:547da2eee78754dc6bac050dd17972f20bdab7db0e106f7daa4d948c7fa3c01e size 259366712"
 model = Model("short_glove.txt")
 
 def a_to_b_is_like_c_to(a: str, b: str, c: str) -> str:
