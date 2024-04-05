@@ -13,7 +13,7 @@ Welcome to CS399 Module 7, where we dive into the fascinating world of Neural Wo
 - [Compatibility Notice](#compatibility-notice)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Insights and Data Processing](#insights-and-data-processing)
+- [The Reason For Choosing this Data Model](#the-reason-for-choosing-this-data-model)
 - [Acknowledgments](#acknowledgments)
 
 ## Introduction
@@ -38,7 +38,7 @@ To get started, ensure you have Python 3.9 or later installed. Then, follow thes
     ```bash
     streamlit run main.py
 
-## Insights and Data Processing
+## The Reason For Choosing this Data Model
 The `gloVe model` was chosen because it was opensource, and it yielded the best results.
 
 ## Acknowledgements
