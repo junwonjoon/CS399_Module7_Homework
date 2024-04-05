@@ -1,19 +1,39 @@
-CS399 Module 7: ai Exploring Neural Word Embeddings with Python
-Author: Wonjoon Jun
-Forked from Prof. Paulus at ERAU
+# CS399 Module 7: Exploring Neural Word Embeddings with Python
 
-This version uses typing_extensions to be more compatiable instead of typing use python versions prior to 3.10
-If you have downloaded this file straight from github the code might not run. Check if short_glove.txt is actuall file with around 300MB of data.
-To run the main.py you must pip install all of the requirements in requirements.txt. Then use following command: streamlit run main.py
-If you want to view the z-score value of the words, view in the terminal, it will show you the logic behind, how the data is being processed.
+![Python](https://img.shields.io/badge/python-3.9+-blue.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
 
-Thank you! Enjoy!
+**Author**: Wonjoon Jun  
+**Forked From**: Prof. Paulus at ERAU
 
-P.S The GloVe dataset was chosen because this data set yielded most accurate results to me.
+Welcome to CS399 Module 7, where we dive into the fascinating world of Neural Word Embeddings using Python. This project, forked from the esteemed Prof. Paulus, aims to explore the intricacies of linguistic models through practical, hands-on experience.
 
+## Table of Contents
+- [Introduction](#introduction)
+- [Compatibility Notice](#compatibility-notice)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Insights and Data Processing](#insights-and-data-processing)
+- [Acknowledgments](#acknowledgments)
+- [Additional Resources](#additional-resources)
 
-## Additional Resources
-https://blog.esciencecenter.nl/king-man-woman-king-9a7fd2935a85
-https://www.geeksforgeeks.org/detect-and-remove-the-outliers-using-python/
-https://www.assemblyai.com/blog/6-best-ai-playgrounds/
-https://fasttext.cc/docs/en/english-vectors.html
+## Introduction
+
+In this module, we explore the power of Neural Word Embeddings, leveraging the GloVe dataset for its remarkable accuracy in capturing linguistic nuances. This journey will illuminate the mechanisms by which models understand and process human language.
+
+## Compatibility Notice
+
+This version introduces `typing_extensions` for enhanced compatibility with Python versions prior to 3.10, diverging from the traditional `typing` module to ensure a smoother experience across different Python environments.
+
+**Important**: If you've directly downloaded the files from GitHub, ensure that `short_glove.txt` is present and contains approximately 300MB of data to avoid any runtime issues.
+
+## Installation
+
+To get started, ensure you have Python 3.9 or later installed. Then, follow these steps:
+
+1. Clone the repository to your local machine.
+2. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+3.```bash
+    streamlit run main.py
