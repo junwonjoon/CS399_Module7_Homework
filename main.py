@@ -73,7 +73,7 @@ class Model(list):
     def __contains__(self, text: str) -> bool:
         return self.find_word(text) is not None
 
-
+file_path = 'path/to/your/large_dataset.csv'
 model = Model("short_glove.txt")
 
 
