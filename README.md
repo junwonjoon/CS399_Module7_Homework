@@ -35,5 +35,6 @@ To get started, ensure you have Python 3.9 or later installed. Then, follow thes
 2. Install the required dependencies:
    ```bash
    pip install -r requirements.txt
-3.```bash
+3. Run using streamlit
+    ```bash
     streamlit run main.py
