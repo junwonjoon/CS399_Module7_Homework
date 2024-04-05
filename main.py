@@ -8,7 +8,7 @@ st.set_page_config(
     page_icon="🤖"
 )
 
-st.title("Welcome to the outlier finder")
+st.title("Welcome to the Outlier Finder")
 
 st.header("Outlier Finder")
 st.caption(
@@ -21,7 +21,7 @@ if len(outliers.split(',')) <= 3:
 else:
     st.write(outlier_finder(outliers.split(',')))
 st.divider()
-st.header("This is connection finder")
+st.header("This is connection finder made by Prof. Paulus")
 st.caption("To use connection finder, enter words to each section, then AI will try to answer the last one")
 cf1 = st.text_input('This is input for A in a to b is c to d', "man", max_chars=15, label_visibility="hidden")
 st.header("to")
