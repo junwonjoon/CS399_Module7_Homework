@@ -48,11 +48,14 @@ class Model(list):
         super().__init__()
         print(f"Loading model from {inp_file_name} ...")
         t0 = process_time()
-        with open(inp_file_name, mode="r", encoding="utf8") as inp_file:
-            for line in inp_file:
-                sa = line.split(" ")
-                self.append(Word(sa[0], [float(x) for x in sa[1:]]))
-        print(f"Loaded in {process_time() - t0} secs")
+        try:
+            with open(inp_file_name, mode="r", encoding="utf8") as inp_file:
+                for line in inp_file:
+                    sa = line.split(" ")
+                    self.append(Word(sa[0], [float(x) for x in sa[1:]]))
+            print(f"Loaded in {process_time() - t0} secs")
+        except:
+            print("Couldn't open file, please try again later")
 
     def find_word(self, text: str) -> Word | None:
         for w in self:
