@@ -15,7 +15,6 @@ Welcome to CS399 Module 7, where we dive into the fascinating world of Neural Wo
 - [Usage](#usage)
 - [Insights and Data Processing](#insights-and-data-processing)
 - [Acknowledgments](#acknowledgments)
-- [Additional Resources](#additional-resources)
 
 ## Introduction
 
@@ -38,3 +37,12 @@ To get started, ensure you have Python 3.9 or later installed. Then, follow thes
 3. Run using streamlit
     ```bash
     streamlit run main.py
+
+## Insights and Data Processing
+    The gloVe model was chosen because it was opensource, and it yielded the best results.
+
+## Acknowledgements
+https://blog.esciencecenter.nl/king-man-woman-king-9a7fd2935a85
+https://www.geeksforgeeks.org/detect-and-remove-the-outliers-using-python/
+https://www.assemblyai.com/blog/6-best-ai-playgrounds/
+https://fasttext.cc/docs/en/english-vectors.html
