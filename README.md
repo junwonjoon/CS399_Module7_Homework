@@ -18,7 +18,7 @@ Welcome to CS399 Module 7, where we dive into the fascinating world of Neural Wo
 
 ## Introduction
 
-In this module, we explore the power of Neural Word Embeddings, leveraging the GloVe dataset for its remarkable accuracy in capturing linguistic nuances. This journey will illuminate the mechanisms by which models understand and process human language.
+`main.py` is a program to remove any outliers within the list of words that are provided.
 
 ## Compatibility Notice
 
