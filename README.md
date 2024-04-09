@@ -43,7 +43,7 @@ To get started, ensure you have Python 3.9 or later installed. Then, follow thes
     streamlit run main.py
 
 ## The Reason For Choosing this Data Model
-The `GloVe model` was chosen because it was opensource, and it yielded the best results.
+The `GloVe model` was chosen because it was opensource, and it yielded the best results over the other language models.
 
 ## Acknowledgements
 1. https://blog.esciencecenter.nl/king-man-woman-king-9a7fd2935a85
