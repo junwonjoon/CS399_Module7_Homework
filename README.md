@@ -25,8 +25,8 @@ Welcome to CS399 Module 7, where we dive into the fascinating world of Neural Wo
 This version introduces `typing_extensions` for enhanced compatibility with Python versions prior to 3.10, diverging from the traditional `typing` module to ensure a smoother experience across different Python environments.
 
 **Important**: If you've directly downloaded the files from GitHub, ensure that `short_glove.txt` is present and contains approximately 300MB of data to avoid any runtime issues. You can click on the button right top corner to `download raw`. The loading for the download takes around 15 seconds, please be patient. Thank you. If the git lfs doesn't work use the link:
-   ```bash
-   https://1drv.ms/t/s!Ah33FZcNviz2nEUrmg5MO5vD6Yr9?e=E4VJj1
+   
+https://1drv.ms/t/s!Ah33FZcNviz2nEUrmg5MO5vD6Yr9?e=E4VJj1
 
 
 ## Installation
